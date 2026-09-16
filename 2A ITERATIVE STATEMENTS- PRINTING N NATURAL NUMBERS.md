@@ -1,40 +1,41 @@
-# Exp. No: 2a  
-## ITERATIVE STATEMENTS – PRINTING N NATURAL NUMBERS
+# Exp.No:2b  
+## FUNCTIONS - PERFECT NUMBER
 
-###  Aim
-To create a Python program for printing `n` natural numbers using a `for` loop.
-
----
-
-###  Algorithm
-
-1. Begin the program.
-2. Use `input()` to read the value of `n` (the upper limit) from the user.
-3. Convert the input to an integer.
-4. Display the message **"Natural Numbers are :"**.
-5. Use a `for` loop to iterate from 1 to `n` (inclusive).
-6. In each iteration, print the current value of `i`.
-7. Terminate the program.
+### AIM  
+To write a Python program to check if a number is a Perfect number using the concept of functions.
 
 ---
 
-### 🧾 Program
+### ALGORITHM
 
+1. Begin the program.  
+2. Read the number `n` from the user using `input()`.  
+3. Convert the input to an integer.  
+4. Define the function `perfectNumber(n)` with the following steps:  
+    - Initialize a variable `factor_sum` to 0.  
+    - Iterate through all numbers from 1 to `n//2` (as divisors of a number can't be greater than half of it).  
+    - If a number `i` divides `n` perfectly (i.e., `n % i == 0`), add `i` to `factor_sum`.  
+    - If `factor_sum` is equal to `n`, then print the number is a perfect number. Otherwise, print it's not a perfect number.  
+5. Terminate the program.
+
+---
+
+### PROGRAM
 ```python
-
-n = int(input(""))
-
-
-print("Natural Numbers are :")
-for i in range(1, n + 1):
-    print(i)
-
+n = int(input())
+sum1 = 0
+for i in range(1, n):
+    if(n % i == 0):
+        sum1 = sum1 + i
+if (sum1 == n):
+    print("The number is a Perfect number!")
+else:
+    print("The number is not a Perfect number!")
 
 ```
 ### OUTPUT
-
-<img width="574" height="508" alt="image" src="https://github.com/user-attachments/assets/62f46126-592f-4db4-8fde-7f6cf22a6576" />
+<img width="769" height="219" alt="image" src="https://github.com/user-attachments/assets/28f41970-3fdd-4e3e-8ffb-f5a480850656" />
 
 
 ### RESULT
-Thus the python program for printing `n` natural numbers using a `for` loop has been implemented and executed successfully.
+Thus the python program for  check if a number is a Perfect number using the concept of functions has been implemented and executed successfully.
